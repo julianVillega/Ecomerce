@@ -9,7 +9,7 @@ function App() {
 
   return (
     <>
-        <header className='row'>
+        <header className='row align-items-center position-relative'>
           <Navbar/>      
         </header>
     </>
