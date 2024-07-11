@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Navbar from './components/Navbar'
+
+import MyNavbar from './components/Navbar'
 import './App.css'
 
 function App() {
@@ -10,7 +9,7 @@ function App() {
   return (
     <>
         <header className='row align-items-center position-relative'>
-          <Navbar/>      
+          <MyNavbar/>      
         </header>
     </>
   )

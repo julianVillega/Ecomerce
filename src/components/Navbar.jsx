@@ -1,35 +1,23 @@
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+
 import CartWidget from "./CartWidget";
-export default function Navbar() {
-    return (
-        <>
-            <nav className="navbar navbar-expand-md navbar-light bg-light col">
-                <div className="container-fluid">
-                    <a className="navbar-brand" href="#">Tienda Tuya</a>
-                    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                            <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#">Tecnología</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Electrodomésticos</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Herramientas</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Construcción</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#">Moda</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <CartWidget/>
-        </>
-    )
+
+export default function MyNavbar() {
+    return <>
+        <Navbar bg="light" data-bs-theme="light">
+            <Container>
+                <Navbar.Brand href="#home">Tienda Tuya</Navbar.Brand>
+                <Nav className="me-auto">
+                    <Nav.Link href="#home">Tecnología</Nav.Link>
+                    <Nav.Link href="#home">Electrodomésticos</Nav.Link>
+                    <Nav.Link href="#home">Herramientas</Nav.Link>
+                    <Nav.Link href="#features">Construcción</Nav.Link>
+                    <Nav.Link href="#pricing">Moda</Nav.Link>
+                </Nav>
+                <CartWidget/>
+            </Container>
+        </Navbar>
+    </>
 }
