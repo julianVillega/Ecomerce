@@ -3,6 +3,65 @@
   padding: 0;
   box-sizing: border-box;
 }
-.ecomerce-nav-bar{
-  background-color: red;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+header{
+  background-color: #f8f9fa;
+}
+
+.cart-widget{
+  width: 50px;
+  height: 50px;
+  display: flex;  
+  place-items: center;
+  background-color: #f8f9fa;
+  position: relative;
+
+  .cart-items-count{
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    background-color: rgb(232 59 59);
+    color:white;
+    font-weight: 500;
+    border-radius: 1rem;
+    font-size: 1rem;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+  }
+}
+
+.hero-container{
+  background-image: url("../images/1684089599447.png");
+  height: 40vh;
+  
+  .row{
+    height: 100%;
+  }
+}
+
+.hero-container .row .col h1{
+  color: rgb(56, 126, 255);
+  color: #fca311;
+  font-size: 5rem;      
+  font-family: "Michroma", sans-serif;
+  font-weight: 400;
+  font-style: normal;  
 }
