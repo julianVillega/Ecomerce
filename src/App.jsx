@@ -1,18 +1,27 @@
 import { useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
 
 import MyNavbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
 import './App.css';
+import { Detail } from './components/Detail';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
         <header>
           <MyNavbar/>
         </header>
-        <ItemListContainer greeting="Delira Con Todas Nuestras Promos !"/>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<ItemListContainer/>}/>
+            <Route path='/category/:categoryId' element={<ItemListContainer/>}/>
+            <Route path='/detail/:productId' element={<Detail/>}/>
+          </Routes>
+        </BrowserRouter>        
+
     </>
   )
 }
