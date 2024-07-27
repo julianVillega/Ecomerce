@@ -1,27 +1,26 @@
 [
-    {"id":1,"name":"Celular Samsung","description":"magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus","image":"celular_samsung.png","category":2},
-    {"id":2,"name":"Celular Motorola","description":"in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque","image":"celular_motorola.png","category":5},
-    {"id":3,"name":"Celular Apple","description":"facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at","image":"celular_apple.png","category":3},
-    {"id":4,"name":"Celular TCL","description":"orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus","image":"celular_tcl.png","category":4},
+    {"id":1,"name":"Celular Samsung","description":"magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus","image":"/src/assets/images/celular_samsung.png","category":2},
+    {"id":2,"name":"Celular Motorola","description":"in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque","image":"/src/assets/images/celular_motorola.png","category":5},
+    {"id":3,"name":"Celular Apple","description":"facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at","image":"/src/assets/images/celular_apple.png","category":3},
+    {"id":4,"name":"Celular TCL","description":"orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus","image":"/src/assets/images/celular_tcl.png","category":4},
 
-    {"id":5,"name":"Secarropas Samsung","description":"nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla","image":"secarropas_samsung.png","category":5},
-    {"id":6,"name":"Heladera Samsung","description":"ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at","image":"heladera_samsumng.png","category":3},
-    {"id":7,"name":"Lava bajillas Samsung","description":"blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo","image":"lavabajillas_samsung.png","category":5},
-    {"id":8,"name":"Aspiradora Samsung","description":"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor","image":"aspiradora_samsung.png","category":2},
+    {"id":5,"name":"Secarropas Samsung","description":"nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla","image":"/src/assets/images/secarropas_samsung.png","category":5},
+    {"id":6,"name":"Heladera Samsung","description":"ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at","image":"/src/assets/images/heladera_samsumng.png","category":3},
+    {"id":7,"name":"Lava bajillas Samsung","description":"blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo","image":"/src/assets/images/lavabajillas_samsung.png","category":5},
+    {"id":8,"name":"Aspiradora Samsung","description":"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor","image":"/src/assets/images/aspiradora_samsung.png","category":2},
 
-    {"id":9,"name":"Taladro","description":"platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi","image":"taladro.png","category":5},
-    {"id":10,"name":"Moladora","description":"in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut","image":"moladora.png","category":3},
-    {"id":11,"name":"Martillo","description":"nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac","image":"martillo.png","category":1},
-    {"id":12,"name":"Sierra","description":"nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit","image":"sierra.png","category":4},
+    {"id":9,"name":"Taladro","description":"platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi","image":"/src/assets/images/taladro.png","category":5},
+    {"id":10,"name":"Moladora","description":"in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut","image":"/src/assets/images/moladora.png","category":3},
+    {"id":11,"name":"Martillo","description":"nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac","image":"/src/assets/images/martillo.png","category":1},
+    {"id":12,"name":"Sierra","description":"nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit","image":"/src/assets/images/sierra.png","category":4},
 
-    {"id":13,"name":"Ladrillo","description":"diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat","image":"ladrillo.png","category":3},
-    {"id":14,"name":"Cemento","description":"primis in faucibus orci luctus et ultrices posuere cubilia curae","image":"cemento.png","category":5},
-    {"id":15,"name":"Teja","description":"vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan","image":"teja.png","category":3},
-    {"id":16,"name":"Pintura","description":"posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis","image":"pintura.png","category":2},
+    {"id":13,"name":"Ladrillo","description":"diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat","image":"/src/assets/images/ladrillo.png","category":3},
+    {"id":14,"name":"Cemento","description":"primis in faucibus orci luctus et ultrices posuere cubilia curae","image":"/src/assets/images/cemento.png","category":5},
+    {"id":15,"name":"Teja","description":"vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan","image":"/src/assets/images/teja.png","category":3},
+    {"id":16,"name":"Pintura","description":"posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis","image":"/src/assets/images/pintura.png","category":2},
 
-    {"id":17,"name":"Pantalon","description":"at nulla suspendisse potenti cras in purus eu magna vulputate luctus","image":"pantalon.png","category":4},
-    {"id":18,"name":"Zapatilla","description":"sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede","image":"zapatilla.png","category":5},
-    {"id":19,"name":"Remera","description":"augue luctus tincidunt nulla mollis molestie lorem quisque ut erat","image":"remera.png","category":1},
-    {"id":20,"name":"Sobretodo","description":"ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in","image":"sobretodo.png","category":2}
-
+    {"id":17,"name":"Pantalon","description":"at nulla suspendisse potenti cras in purus eu magna vulputate luctus","image":"/src/assets/images/pantalon.png","category":4},
+    {"id":18,"name":"Zapatilla","description":"sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede","image":"/src/assets/images/zapatilla.png","category":5},
+    {"id":19,"name":"Remera","description":"augue luctus tincidunt nulla mollis molestie lorem quisque ut erat","image":"/src/assets/images/remera.png","category":1},
+    {"id":20,"name":"Sobretodo","description":"ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in","image":"/src/assets/images/sobretodo.png","category":2}    
 ]
