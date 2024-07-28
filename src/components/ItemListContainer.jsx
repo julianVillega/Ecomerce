@@ -6,16 +6,26 @@ import { Product } from './Product';
 import { useEffect, useState } from 'react';
 
 import MOCK_DATA from "../assets/json/MOCK_DATA"
+import { useParams } from 'react-router-dom';
 
-export default function ItemListContainer ({greeting}){
+export default function ItemListContainer (){
     const [productos, setProductos] = useState([])
+    const {categoryId} = useParams()
 
     useEffect(()=>{
         new Promise((resolve, reject)=>{
             setTimeout(() => resolve(MOCK_DATA), 1000);
         })
-        .then((response) => setProductos(response))
-    },[])
+        .then(
+            (response) => {
+                if(categoryId === undefined){
+                    setProductos(response)
+                }
+                else{
+                    setProductos(response.filter(prod => prod.category == categoryId))
+                }
+            })
+    },[categoryId])
 
     const rows = []
     for(let i = 0; i< productos.length; i = i + 3){
