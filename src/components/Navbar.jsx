@@ -10,7 +10,7 @@ export default function MyNavbar() {
     return (
         <Navbar expand="lg" className="bg-body-tertiary">
             <Container className="justify-content-between">
-                <Navbar.Brand as={NavLink} to="/">React-Bootstrap</Navbar.Brand>                
+                <Navbar.Brand as={NavLink} to="/">Tienda Tuya</Navbar.Brand>                
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />                
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
