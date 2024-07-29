@@ -13,11 +13,13 @@ export default function ItemListContainer (){
     const {categoryId} = useParams()
 
     useEffect(()=>{
+        //simulo el uso de una API con una promesa
         new Promise((resolve, reject)=>{
             setTimeout(() => resolve(MOCK_DATA), 1000);
         })
         .then(
             (response) => {
+                //filtro los resultados por categoria
                 if(categoryId === undefined){
                     setProductos(response)
                 }
@@ -27,6 +29,8 @@ export default function ItemListContainer (){
             })
     },[categoryId])
 
+
+    //Construo una grilla de bootstrap con los productos.
     const rows = []
     for(let i = 0; i< productos.length; i = i + 3){
         let terna = productos.slice(i, i + 3);
