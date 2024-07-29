@@ -47,3 +47,11 @@ header{
     align-items: start;
   }
 }
+
+.product-image-div{
+  padding-top: 10px;  
+  .product-image{  
+    height: 100px;
+    width: auto;
+  }
+}
