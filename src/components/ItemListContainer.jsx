@@ -31,29 +31,13 @@ export default function ItemListContainer (){
 
 
     //Construo una grilla de bootstrap con los productos.
-    const rows = []
-    for(let i = 0; i< productos.length; i = i + 3){
-        let terna = productos.slice(i, i + 3);
-        terna = terna.map((producto) => {             
-            return(
-            <Col xs={3} key={producto.id}>
-                <Product name={producto.name} description={producto.description} image={producto.image}/>
-            </Col>)
-        })
-        if(terna.length < 3){
-            let numberOfDummyCols = 3 - terna.length;
-            terna = [...terna, ...Array(numberOfDummyCols).fill(null).map((_, index)=><Col xs={3} key={`dummy-${index}`}></Col>)]
-        }
-        rows.push(
-            <Row key={i} className='my-5 justify-content-evenly'>{terna}</Row>
-        )
-    }
+    const prods = productos.map((producto)=><Product key={producto.id} name={producto.name} description={producto.description} image={producto.image}/>)
 
     return(
         <>
-        <Container  className='gy-5'>
-            {rows}
-        </Container>
+        <div className='div-productos'>
+            {prods}
+        </div>
         </>
     )
 }
