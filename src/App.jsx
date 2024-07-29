@@ -4,16 +4,18 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import MyNavbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
+import CartWidget from './components/CartWidget';
+
 import './App.css';
 import { Detail } from './components/Detail';
 
 function App() {
   return (
     <>
-
         <BrowserRouter>
-          <header>
+          <header className='d-flex justify-content-between'>
             <MyNavbar/>
+            <CartWidget/>
           </header>
           <Routes>
             <Route path='/' element={<ItemListContainer/>}/>
