@@ -14,11 +14,11 @@ export default function MyNavbar() {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />                
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto">
-                        <Nav.Link as={NavLink} to="/category/1">Tecnología</Nav.Link>
-                        <Nav.Link as={NavLink} to="/category/2">Electrodomésticos</Nav.Link>
-                        <Nav.Link as={NavLink} to="/category/3">Herramientas</Nav.Link>
-                        <Nav.Link as={NavLink} to="/category/4">Construcción</Nav.Link>
-                        <Nav.Link as={NavLink} to="/category/5">Moda</Nav.Link>
+                        <Nav.Link as={NavLink} to="/category/tecnologia">Tecnología</Nav.Link>
+                        <Nav.Link as={NavLink} to="/category/electrodomesticos">Electrodomésticos</Nav.Link>
+                        <Nav.Link as={NavLink} to="/category/herramientas">Herramientas</Nav.Link>
+                        <Nav.Link as={NavLink} to="/category/materialesConstruccion">Construcción</Nav.Link>
+                        <Nav.Link as={NavLink} to="/category/ropa">Moda</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Container>
