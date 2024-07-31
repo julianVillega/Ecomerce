@@ -1,7 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { NavLink } from "react-router-dom"
 
-export const Product = ({name, description, image}) => {
+export const Product = ({name, description, image, productId}) => {
     return(
         <Card>
             <div className='d-flex justify-content-center product-image-div'>                
@@ -12,7 +13,7 @@ export const Product = ({name, description, image}) => {
                 <Card.Text className='product-description'>
                     {description.slice(0, 50)}
                 </Card.Text>
-                <Button variant="primary">Detalles</Button>
+                <Button as={NavLink} to={`/detail/${productId}`} variant="primary">Detalles</Button>
             </Card.Body>
         </Card>
     )

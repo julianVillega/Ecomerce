@@ -1,11 +1,11 @@
-import { Product } from './Product';
 import { useEffect, useState } from 'react';
-
-import MOCK_DATA from "../assets/json/MOCK_DATA"
 import { useParams } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
+
+import MOCK_DATA from "../assets/json/MOCK_DATA"
+import { Product } from './Product';
 
 export default function ItemListContainer (){
     const [productos, setProductos] = useState([])
@@ -32,7 +32,7 @@ export default function ItemListContainer (){
 
 
     //creo los componentes para los productos
-    const prods = productos.map((producto)=><Product key={producto.id} name={producto.name} description={producto.description} image={producto.image}/>)
+    const prods = productos.map((producto)=><Product key={producto.id} productId={producto.id} name={producto.name} description={producto.description} image={producto.image}/>)
     
     //creo spinners para mostrar durante la carga de los productos
     const placeHolders = new Array(
