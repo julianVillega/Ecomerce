@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
-import { Row } from "react-bootstrap";
+
+import "./MyNavBar.css"
 
 export default function MyNavbar() {
     return (
