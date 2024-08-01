@@ -2,6 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from "react-router-dom"
 
+import "./Product.css"
+
 export const Product = ({name, description, image, productId}) => {
     return(
         <Card>

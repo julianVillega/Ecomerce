@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 
 
-
+import "./CartWidget.css"
 
 export default function CartWidget() {
     return(

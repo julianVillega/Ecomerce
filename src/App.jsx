@@ -2,12 +2,12 @@ import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 
-import MyNavbar from './components/Navbar';
-import ItemListContainer from './components/ItemListContainer';
-import CartWidget from './components/CartWidget';
+import MyNavbar from './components/MyNavBar/MyNavBar';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import CartWidget from './components/CartWidget/CartWidget';
 
 import './App.css';
-import { Detail } from './components/Detail';
+import { Detail } from './components/Detail/Detail';
 
 function App() {
   return (

@@ -1,0 +1,25 @@
+.div-productos{  
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: end;
+    justify-items: center;
+    row-gap: 15px;
+    margin: 50px 15px;
+    
+    @media screen and (min-width: 768px) { 
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 40px;
+      margin: 50px 40px;
+    }
+  
+    @media screen and (min-width: 992px) { 
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 40px;
+      margin-left: 5%;
+      margin-right: 5%;
+    }
+  
+    .product-loading-spinner{
+      margin-top: 50%;
+    }  
+  }

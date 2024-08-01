@@ -1,0 +1,53 @@
+.datail-container {
+  display: flex;
+  justify-content: center;
+}
+
+.datail-container__title{
+  grid-area: title;  
+}
+
+.datail-container__image{
+  grid-area: image;
+  justify-self: center;
+}
+
+.datail-container__description{
+  grid-area: description;
+}
+
+.datail-container__add-to-cart{
+  grid-area: addToCart;
+  justify-self: center;
+  width: fit-content;
+  text-wrap: nowrap;
+}
+
+.datail-container__detail {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  grid-template-rows: repeat(4, auto);
+  justify-content: center;
+  row-gap: 10px;
+  margin: 10px;
+  grid-template-areas:
+    "title title"
+    "image image"
+    "addToCart addToCart"
+    "description description";
+
+  @media screen and (min-width: 768px) {
+    grid-template-rows: repeat(3, auto);
+    max-width: 60vw;
+    grid-template-areas:
+      "title title"
+      "image addToCart"
+      "description description";
+
+    .datail-container__add-to-cart {
+      align-self: center;
+    }
+
+  }
+
+}

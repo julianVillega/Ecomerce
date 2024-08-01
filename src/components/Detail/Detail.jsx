@@ -7,10 +7,12 @@ import { faCartPlus, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
-import MOCK_DATA from "../assets/json/MOCK_DATA"
-import { useData } from "../hooks/useData";
+import MOCK_DATA from "../../assets/json/MOCK_DATA"
+import { useData } from "../../hooks/useData";
 
-import {findById} from"../helpers/filterProducts";
+import {findById} from"../../helpers/filterProducts";
+
+import "./Detail.css"
 
 export const Detail = () => {
     const { productId } = useParams()

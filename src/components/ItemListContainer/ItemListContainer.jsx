@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 
-import MOCK_DATA from "../assets/json/MOCK_DATA"
-import { Product } from './Product';
-import { useData } from '../hooks/useData';
-import { filterByCategory } from '../helpers/filterProducts';
+import MOCK_DATA from "../../assets/json/MOCK_DATA"
+import { Product } from '../Product/Product';
+import { useData } from '../../hooks/useData';
+import { filterByCategory } from '../../helpers/filterProducts';
+
+import "./ItemListContainer.css"
 
 export default function ItemListContainer (){
     
