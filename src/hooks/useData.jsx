@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useData = (dataSource, categoryId) => {
+export const useData = (dataSource, filterFunction, ...dependencies) => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState([])
 
@@ -12,12 +12,12 @@ export const useData = (dataSource, categoryId) => {
         })
         .then((response) => {
                 //filtro los resultados por categoria
-                if (categoryId === undefined) setData(response)
-                else setData(response.filter(prod => prod.category == categoryId))
+                if (filterFunction === undefined) setData(response)                
+                else setData(filterFunction(response))
         })
         .finally(() => setLoading(false));
     
-    }, [categoryId])
+    }, [...dependencies])
 
     return { loading, data }
 }

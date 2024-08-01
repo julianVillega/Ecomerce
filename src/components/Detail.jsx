@@ -8,23 +8,15 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
 import MOCK_DATA from "../assets/json/MOCK_DATA"
+import { useData } from "../hooks/useData";
+
+import {findById} from"../helpers/filterProducts";
 
 export const Detail = () => {
     const { productId } = useParams()
-    const [producto, setProducto] = useState(null)
-    const [loading, setLoading] = useState(true)
 
-    useEffect(() => {
-        new Promise((resolve) => {
-            setLoading(true)
-            setTimeout(() => resolve(MOCK_DATA), 1000)
-        })
-            .then((productos) => {
-                setProducto(productos.find((prod) => prod.id === Number(productId)))
-                setLoading(false)
-            })
-    }, [productId])
 
+    const {loading, data} = useData(MOCK_DATA,findById(Number(productId)),productId)
     if (loading) {
         return (
             <Container className="d-flex justify-content-center my-auto">
@@ -32,13 +24,13 @@ export const Detail = () => {
             </Container>
         )
     }
-    if (producto === undefined) return <h1>producto no encontrado</h1>
+    if (data === undefined) return <h1>data no encontrado</h1>
     return (
         <div className="datail-container">
             <div className="datail-container__detail">
-                <h1 className="datail-container__title">{producto.name}</h1>
-                <img className="datail-container__image" src={`${producto.image}`} />
-                <p className="datail-container__description">{producto.description}</p>
+                <h1 className="datail-container__title">{data.name}</h1>
+                <img className="datail-container__image" src={`${data.image}`} />
+                <p className="datail-container__description">{data.description}</p>
                 <Button variant="primary" className="datail-container__add-to-cart">Comprar <FontAwesomeIcon icon={faCartPlus} className="fa-xl" /></Button>
             </div>
         </div>

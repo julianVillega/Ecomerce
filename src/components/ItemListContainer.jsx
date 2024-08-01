@@ -6,12 +6,14 @@ import { faSpinner } from '@fortawesome/free-solid-svg-icons'
 import MOCK_DATA from "../assets/json/MOCK_DATA"
 import { Product } from './Product';
 import { useData } from '../hooks/useData';
+import { filterByCategory } from '../helpers/filterProducts';
 
 export default function ItemListContainer (){
     
+
     const {categoryId} = useParams()
     //recupero los productos con un custom hook
-    const{loading, data} = useData(MOCK_DATA, categoryId)
+    const{loading, data} = useData(MOCK_DATA, filterByCategory(categoryId) ,categoryId)
 
     //creo los componentes para los productos
     const prods = data.map(
