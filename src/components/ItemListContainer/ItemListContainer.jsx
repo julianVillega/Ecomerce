@@ -22,7 +22,8 @@ export default function ItemListContainer (){
                 productId={producto.id}
                 name={producto.name}
                 description={producto.description}
-                image={producto.image}/>
+                image={producto.image}
+                price = {producto.price}/>
     )
     
     //creo spinners para mostrar durante la carga de los productos

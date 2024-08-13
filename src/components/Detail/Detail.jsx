@@ -8,6 +8,7 @@ import Container from 'react-bootstrap/Container';
 
 import "./Detail.css"
 import { useProduct } from "../../hooks/useProduct";
+import { formatPrice } from "../../helpers/formatPrice";
 
 export const Detail = () => {
     const { productId } = useParams()
@@ -28,6 +29,9 @@ export const Detail = () => {
                 <h1 className="datail-container__title">{data.name}</h1>
                 <img className="datail-container__image" src={`${data.image}`} />
                 <p className="datail-container__description">{data.description}</p>
+                <h6>
+                        <span>{formatPrice(data.price)}</span>                        
+                </h6>
                 <Button variant="primary" className="datail-container__add-to-cart">Comprar <FontAwesomeIcon icon={faCartPlus} className="fa-xl" /></Button>
             </div>
         </div>
