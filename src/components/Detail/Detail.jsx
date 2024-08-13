@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,18 +6,14 @@ import { faCartPlus, faSpinner } from '@fortawesome/free-solid-svg-icons'
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 
-import MOCK_DATA from "../../assets/json/MOCK_DATA"
-import { useData } from "../../hooks/useData";
-
-import {findById} from"../../helpers/filterProducts";
-
 import "./Detail.css"
+import { useProduct } from "../../hooks/useProduct";
 
 export const Detail = () => {
     const { productId } = useParams()
 
 
-    const {loading, data} = useData(MOCK_DATA,findById(Number(productId)),productId)
+    const {loading, data} = useProduct(productId)
     if (loading) {
         return (
             <Container className="d-flex justify-content-center my-auto">
@@ -26,7 +21,7 @@ export const Detail = () => {
             </Container>
         )
     }
-    if (data === undefined) return <h1>data no encontrado</h1>
+    if (data === undefined) return <h1>No se encontro el producto</h1>
     return (
         <div className="datail-container">
             <div className="datail-container__detail">
