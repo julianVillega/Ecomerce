@@ -1,26 +1,166 @@
 [
-    {"id":1,"price":1500000,"name":"Celular Samsung","description":"magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus","image":"productImages/celular_samsung.png","category":"tecnologia"},
-    {"id":2,"price":1000000,"name":"Celular Motorola","description":"in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque","image":"productImages/celular_motorola.png","category":"tecnologia"},
-    {"id":3,"price":5000000,"name":"Celular Apple","description":"facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at","image":"productImages/celular_apple.png","category":"tecnologia"},
-    {"id":4,"price":870000,"name":"Celular TCL","description":"orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus","image":"productImages/celular_tcl.png","category":"tecnologia"},
+    {
+        "id": 1,
+        "price": 1500000,
+        "name": "Celular Samsung",
+        "description": "magna bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus",
+        "image": "productImages/celular_samsung.png",
+        "category": "tecnologia"
+    },
+    {
+        "id": 2,
+        "price": 1000000,
+        "name": "Celular Motorola",
+        "description": "in hac habitasse platea dictumst morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque",
+        "image": "productImages/celular_motorola.png",
+        "category": "tecnologia"
+    },
+    {
+        "id": 3,
+        "price": 5000000,
+        "name": "Celular Apple",
+        "description": "facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at",
+        "image": "productImages/celular_apple.png",
+        "category": "tecnologia"
+    },
+    {
+        "id": 4,
+        "price": 870000,
+        "name": "Celular TCL",
+        "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus",
+        "image": "productImages/celular_tcl.png",
+        "category": "tecnologia"
+    },
 
-    {"id":5,"price":900000,"name":"Secarropas Samsung","description":"nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla","image":"productImages/secarropas_samsung.png","category":"electrodomesticos"},
-    {"id":6,"price":1200000,"name":"Heladera Samsung","description":"ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at","image":"productImages/heladera_samsumng.png","category":"electrodomesticos"},
-    {"id":7,"price":780000,"name":"Lava bajillas Samsung","description":"blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo","image":"productImages/lavabajillas_samsung.png","category":"electrodomesticos"},
-    {"id":8,"price":20000,"name":"Aspiradora Samsung","description":"bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor","image":"productImages/aspiradora_samsung.png","category":"electrodomesticos"},
+    {
+        "id": 5,
+        "price": 900000,
+        "name": "Secarropas Samsung",
+        "description": "nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla",
+        "image": "productImages/secarropas_samsung.png",
+        "category": "electrodomesticos"
+    },
+    {
+        "id": 6,
+        "price": 1200000,
+        "name": "Heladera Samsung",
+        "description": "ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at",
+        "image": "productImages/heladera_samsumng.png",
+        "category": "electrodomesticos"
+    },
+    {
+        "id": 7,
+        "price": 780000,
+        "name": "Lava bajillas Samsung",
+        "description": "blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo",
+        "image": "productImages/lavabajillas_samsung.png",
+        "category": "electrodomesticos"
+    },
+    {
+        "id": 8,
+        "price": 20000,
+        "name": "Aspiradora Samsung",
+        "description": "bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor",
+        "image": "productImages/aspiradora_samsung.png",
+        "category": "electrodomesticos"
+    },
 
-    {"id":9,"price":9000,"name":"Taladro","description":"platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi","image":"productImages/taladro.png","category":"herramientas"},
-    {"id":10,"price":75000,"name":"Moladora","description":"in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut","image":"productImages/moladora.png","category":"herramientas"},
-    {"id":11,"price":1000,"name":"Martillo","description":"nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac","image":"productImages/martillo.png","category":"herramientas"},
-    {"id":12,"price":8000,"name":"Sierra","description":"nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit","image":"productImages/sierra.png","category":"herramientas"},
+    {
+        "id": 9,
+        "price": 9000,
+        "name": "Taladro",
+        "description": "platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi",
+        "image": "productImages/taladro.png",
+        "category": "herramientas"
+    },
+    {
+        "id": 10,
+        "price": 75000,
+        "name": "Moladora",
+        "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
+        "image": "productImages/moladora.png",
+        "category": "herramientas"
+    },
+    {
+        "id": 11,
+        "price": 1000,
+        "name": "Martillo",
+        "description": "nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac",
+        "image": "productImages/martillo.png",
+        "category": "herramientas"
+    },
+    {
+        "id": 12,
+        "price": 8000,
+        "name": "Sierra",
+        "description": "nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit",
+        "image": "productImages/sierra.png",
+        "category": "herramientas"
+    },
 
-    {"id":13,"price":200,"name":"Ladrillo","description":"diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat","image":"productImages/ladrillo.png","category":"materialesConstruccion"},
-    {"id":14,"price":5000,"name":"Cemento","description":"primis in faucibus orci luctus et ultrices posuere cubilia curae","image":"productImages/cemento.png","category":"materialesConstruccion"},
-    {"id":15,"price":200,"name":"Teja","description":"vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan","image":"productImages/teja.png","category":"materialesConstruccion"},
-    {"id":16,"price":12000,"name":"Pintura","description":"posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis","image":"productImages/pintura.png","category":"materialesConstruccion"},
+    {
+        "id": 13,
+        "price": 200,
+        "name": "Ladrillo",
+        "description": "diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat",
+        "image": "productImages/ladrillo.png",
+        "category": "materialesConstruccion"
+    },
+    {
+        "id": 14,
+        "price": 5000,
+        "name": "Cemento",
+        "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae",
+        "image": "productImages/cemento.png",
+        "category": "materialesConstruccion"
+    },
+    {
+        "id": 15,
+        "price": 200,
+        "name": "Teja",
+        "description": "vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan",
+        "image": "productImages/teja.png",
+        "category": "materialesConstruccion"
+    },
+    {
+        "id": 16,
+        "price": 12000,
+        "name": "Pintura",
+        "description": "posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis",
+        "image": "productImages/pintura.png",
+        "category": "materialesConstruccion"
+    },
 
-    {"id":17,"price":5000,"name":"Pantalon","description":"at nulla suspendisse potenti cras in purus eu magna vulputate luctus","image":"productImages/pantalon.png","category":"ropa"},
-    {"id":18,"price":10000,"name":"Zapatilla","description":"sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede","image":"productImages/zapatilla.png","category":"ropa"},
-    {"id":19,"price":3000,"name":"Remera","description":"augue luctus tincidunt nulla mollis molestie lorem quisque ut erat","image":"productImages/remera.png","category":"ropa"},
-    {"id":20,"price":12000,"name":"Sobretodo","description":"ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in","image":"productImages/sobretodo.png","category":"ropa"}    
+    {
+        "id": 17,
+        "price": 5000,
+        "name": "Pantalon",
+        "description": "at nulla suspendisse potenti cras in purus eu magna vulputate luctus",
+        "image": "productImages/pantalon.png",
+        "category": "ropa"
+    },
+    {
+        "id": 18,
+        "price": 10000,
+        "name": "Zapatilla",
+        "description": "sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede",
+        "image": "productImages/zapatilla.png",
+        "category": "ropa"
+    },
+    {
+        "id": 19,
+        "price": 3000,
+        "name": "Remera",
+        "description": "augue luctus tincidunt nulla mollis molestie lorem quisque ut erat",
+        "image": "productImages/remera.png",
+        "category": "ropa"
+    },
+    {
+        "id": 20,
+        "price": 12000,
+        "name": "Sobretodo",
+        "description": "ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in",
+        "image": "productImages/sobretodo.png",
+        "category": "ropa"
+    }
 ]
