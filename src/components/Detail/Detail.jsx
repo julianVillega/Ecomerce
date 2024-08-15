@@ -1,3 +1,4 @@
+import { useContext, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,11 +10,27 @@ import Container from 'react-bootstrap/Container';
 import './Detail.css';
 import { useProduct } from '../../hooks/useProduct';
 import { formatPrice } from '../../helpers/formatPrice';
+import { CartContext } from '../../contexts/CartContextProvider';
 
 export const Detail = () => {
     const { productId } = useParams();
+    const { products, addProduct } = useContext(CartContext);
 
+    const [quantity, setQuantity] = useState(1);
     const { loading, data } = useProduct(productId);
+
+    const handleIncrese = ()=>{
+        quantity < data.stock && setQuantity(quantity + 1)
+    }
+
+    const handleDecrese = ()=>{
+        quantity > 1 && setQuantity(quantity - 1)
+    }
+
+    const handleAdd = ()=>{
+        addProduct({...data, quantity})
+    }
+
     if (loading) {
         return (
             <Container className='d-flex justify-content-center my-auto'>
@@ -29,11 +46,24 @@ export const Detail = () => {
                 <img className='datail-container__image' src={`${data.image}`} />
                 <p className='datail-container__description'>{data.description}</p>
                 <h6>
-                    <span>{formatPrice(data.price)}</span>
+                    <span>Stock: {formatPrice(data.price)}</span>
                 </h6>
-                <Button variant='primary' className='datail-container__add-to-cart'>
-                    Comprar <FontAwesomeIcon icon={faCartPlus} className='fa-xl' />
-                </Button>
+                <span>{`Stock: ${data.stock}`}</span>
+                <div className='datail-container__add-to-cart'>
+                    <Button onClick={handleDecrese} className='detail-container__button-add' variant='primary'>
+                        -
+                    </Button>
+                    <Button onClick={handleAdd} className='detail-container__button-cart' variant='primary'>
+                        <FontAwesomeIcon
+                            icon={faCartPlus}
+                            className='fa-xl datail-container__cart-icon bg-primary'
+                        />
+                        {quantity}
+                    </Button>
+                    <Button onClick={handleIncrese} className='detail-container__button-remove' variant='primary'>
+                        +
+                    </Button>
+                </div>
             </div>
         </div>
     );
