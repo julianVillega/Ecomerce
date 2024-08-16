@@ -2,21 +2,15 @@ import { useParams } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
-import { useContext } from 'react';
 
 import { Product } from '../Product/Product';
 import { useData } from '../../hooks/useData';
-import { CartContext } from '../../contexts/CartContextProvider';
-
-import { CartPreview } from '../CartPreview/CartPreview';
 import './ItemListContainer.css';
 
 export default function ItemListContainer() {
     const { categoryId } = useParams();
     //recupero los productos con un custom hook
     const { loading, data } = useData(categoryId);
-
-    const { showCartPreview } = useContext(CartContext);
 
     //creo los componentes para los productos
     const prods = data.map((producto) => (
@@ -38,7 +32,7 @@ export default function ItemListContainer() {
     ];
 
     return (
-        <>{showCartPreview && <CartPreview className="cart-preview"/>}            
+        <>
             <div className='div-productos'>
                 {(() => {
                     if (loading) return placeHolders;

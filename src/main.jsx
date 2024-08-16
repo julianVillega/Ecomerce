@@ -6,6 +6,7 @@ import './App.css';
 
 // Import the functions you need from the SDKs you need
 import { initializeApp } from 'firebase/app';
+import { CartContextProvider } from './contexts/CartContextProvider.jsx';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -22,6 +23,8 @@ initializeApp(firebaseConfig);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <App />
+        <CartContextProvider>
+            <App />
+        </CartContextProvider>
     </React.StrictMode>
 );
