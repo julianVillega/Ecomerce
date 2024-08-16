@@ -1,21 +1,20 @@
-import { useState, createContext, useEffect } from 'react';
+import { useState, createContext } from 'react';
 
 export const CartContext = createContext();
 
 export const CartContextProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
+    const [showCartPreview, setShowCartPreview] = useState(false);
 
     function addProduct(product) {
-        console.log("invocando el contexto")
         //si el producto ya esta en el carrito, incremento su cantidad.
         if (products.some((prod) => prod.id === product.id)) {
             setProducts(
                 products.map((p) => {
                     if (p.id === product.id) {
-                        if(p.quantity + product.quantity < p.stock){
+                        if (p.quantity + product.quantity < p.stock) {
                             return { ...p, quantity: p.quantity + product.quantity };
-                        }
-                        else{
+                        } else {
                             return { ...p, quantity: p.stock };
                         }
                     }
@@ -26,13 +25,35 @@ export const CartContextProvider = ({ children }) => {
         //si el producto no esta en el carrito, lo agrego.
         else {
             setProducts([...products, product]);
-        }        
+        }
     }
 
-    function itemsCount(){
-        return products.reduce((acumulated, current)=>{ return acumulated + current.quantity},0)
+    function removeProduct(product) {
+        setProducts(products.filter((prod) => prod.id != product.id));
     }
 
-    useEffect(()=>console.log(itemsCount()),[products])
-    return <CartContext.Provider value={{ products, addProduct, itemsCount }}>{children}</CartContext.Provider>;
+    function itemsCount() {
+        return products.reduce((acumulated, current) => {
+            return acumulated + current.quantity;
+        }, 0);
+    }
+
+    function getProductQuantity(product) {
+        return products.find((p) => p.id === product.id)?.quantity || 0;
+    }
+    return (
+        <CartContext.Provider
+            value={{
+                products,
+                addProduct,
+                itemsCount,
+                showCartPreview,
+                setShowCartPreview,
+                getProductQuantity,
+                removeProduct,
+            }}
+        >
+            {children}
+        </CartContext.Provider>
+    );
 };

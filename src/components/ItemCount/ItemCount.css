@@ -1,0 +1,27 @@
+.item-count{
+    display: flex;
+    flex-wrap: nowrap;    
+}
+
+.btn.item-count__button-add{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.item-count__quantity{
+    font-size: 1.2rem;    
+    margin: auto 5px;    
+}
+
+.btn.item-count__button-remove{
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.btn.item-count__button-cart{    
+    margin: 0 5px;    
+}
+
+.item-count__button-empty{
+    margin-left: 5px;
+}

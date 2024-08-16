@@ -7,11 +7,11 @@ import { useContext } from 'react';
 import { CartContext } from '../../contexts/CartContextProvider';
 
 export default function CartWidget() {
-    const {itemsCount} = useContext(CartContext)
+    const { itemsCount, showCartPreview, setShowCartPreview } = useContext(CartContext);
 
     return (
         <div className='cart-widget'>
-            <div>
+            <div onClick={() => setShowCartPreview(!showCartPreview)}>
                 <FontAwesomeIcon icon={faCartArrowDown} className='fa-xl' />
                 <div className='cart-items-count'>
                     <span>{itemsCount()}</span>

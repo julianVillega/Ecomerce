@@ -19,25 +19,6 @@
 .datail-container__add-to-cart {
     grid-area: addToCart;
     justify-self: center;
-    width: fit-content;    
-    height: 100%;    
-    text-wrap: nowrap;
-    display: flex;
-    align-items: center;    
-}
-
-.btn.detail-container__button-add{
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-.btn.detail-container__button-remove{
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-}
-
-.btn.detail-container__button-cart{
-    border-radius: 0;
 }
 
 .datail-container__detail {

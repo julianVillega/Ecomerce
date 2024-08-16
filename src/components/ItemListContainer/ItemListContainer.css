@@ -23,3 +23,10 @@
         margin-top: 50%;
     }
 }
+
+.cart-preview {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    z-index: 999;
+}
