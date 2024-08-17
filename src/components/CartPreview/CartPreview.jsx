@@ -43,8 +43,8 @@ export const CartPreview = () => {
                                 } x ${formatPrice(producto.price)} = ${formatPrice(
                                     producto.price * producto.quantity
                                 )}`}</span>
-                                <div>
-                                    <ItemCount data={producto}></ItemCount>
+                                <div className='cart-preview__item_count'>
+                                    <ItemCount data={producto} isSmall={true}></ItemCount>
                                 </div>
                             </div>
                         );
