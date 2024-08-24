@@ -9,6 +9,7 @@ import { Detail } from './components/Detail/Detail';
 import { CartContext } from './contexts/CartContextProvider';
 import { CartPreview } from './components/CartPreview/CartPreview';
 import { useContext } from 'react';
+import { Checkout } from './components/Checkout/Checkout';
 
 function App() {
     const { showCartPreview } = useContext(CartContext);
@@ -24,6 +25,7 @@ function App() {
                     <Route path='/' element={<ItemListContainer />} />
                     <Route path='/category/:categoryId' element={<ItemListContainer />} />
                     <Route path='/detail/:productId' element={<Detail />} />
+                    <Route path='/checkout' element={<Checkout />} />
                     <Route path='*' element={<h1>page not found</h1>} />
                 </Routes>
             </BrowserRouter>

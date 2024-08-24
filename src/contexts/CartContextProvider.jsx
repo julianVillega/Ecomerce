@@ -41,6 +41,14 @@ export const CartContextProvider = ({ children }) => {
     function getProductQuantity(product) {
         return products.find((p) => p.id === product.id)?.quantity || 0;
     }
+
+    function getFinalPrice(){
+        return products.reduce((acc, current) => acc + current.quantity * current.price, 0)
+    }
+
+    function clearCart(){
+        setProducts([])
+    }
     return (
         <CartContext.Provider
             value={{
@@ -51,6 +59,8 @@ export const CartContextProvider = ({ children }) => {
                 setShowCartPreview,
                 getProductQuantity,
                 removeProduct,
+                getFinalPrice,
+                clearCart
             }}
         >
             {children}

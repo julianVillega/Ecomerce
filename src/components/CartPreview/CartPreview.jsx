@@ -6,6 +6,7 @@ import { Button } from 'react-bootstrap';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFaceSadCry } from '@fortawesome/free-solid-svg-icons';
 import { ItemCount } from '../ItemCount/ItemCount';
+import { NavLink } from 'react-router-dom';
 
 export const CartPreview = () => {
     const { products, showCartPreview, setShowCartPreview } = useContext(CartContext);
@@ -51,7 +52,11 @@ export const CartPreview = () => {
                     })}
                 </div>
                 <div className='cart-preview__purchase-div'>
-                    <Button>Finalizar Compra</Button>
+                    {products.length != 0 && (
+                        <Button as={NavLink} to={`checkout`} variant='primary'>
+                            Finalizar Compra
+                        </Button>
+                    )}
                 </div>
             </div>
         </>
