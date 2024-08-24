@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { useOrder } from '../../hooks/useOrder';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import './Checkout.css';
 
 export const Checkout = () => {
     //consumo el contexto del carrito
@@ -64,7 +65,7 @@ export const Checkout = () => {
             </div>
         );
 
-    //si estamos esperando el id del orden o ya lo tenemos    
+    //si estamos esperando el id del orden o ya lo tenemos
     if (orderId != null || waitingOrder) {
         return (
             <>
@@ -80,27 +81,31 @@ export const Checkout = () => {
         );
     }
     return (
-        <>
-            <h1>Tu Compra</h1>
-            <div>
+        <div className='main'>
+            <h1 className='main__title'>Tu Compra</h1>
+            <div className='products-list'>
                 {products.map((p) => {
                     return (
-                        <div key={p.id}>
+                        <div key={p.id} className='products-list_product'>
                             <h2>{p.name}</h2>
-                            <img src={p.image} />
-                            <h3>{`Cantidad: ${p.quantity}`}</h3>
-                            <h3>{`Precio Unitario: ${formatPrice(p.price)}`}</h3>
-                            <h3>{`Subtotal: ${formatPrice(p.quantity * p.price)}`}</h3>
+                            <img className='products-list_product-image' src={p.image} />
+                            <h3 className='products__product-quantity'>{`Cantidad: ${p.quantity}`}</h3>
+                            <h3 className='products__product-price'>{`Precio Unitario: ${formatPrice(
+                                p.price
+                            )}`}</h3>
+                            <h3 className='products__product-subtotal'>{`Subtotal: ${formatPrice(
+                                p.quantity * p.price
+                            )}`}</h3>
                         </div>
                     );
                 })}
             </div>
-            <div>
+            <div className='resume'>
                 <h2>Resumen:</h2>
                 <h3>{`Cantidad de articulos: ${itemsCount()}`}</h3>
                 <h3>{`Total: ${formatPrice(getFinalPrice())}`}</h3>
             </div>
-            <Form onSubmit={handleSubmit}>
+            <Form onSubmit={handleSubmit} className='form'>
                 <Form.Group className='mb-3' controlId='name'>
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control
@@ -161,6 +166,6 @@ export const Checkout = () => {
                     Finalizar Pedido
                 </Button>
             </Form>
-        </>
+        </div>
     );
 };

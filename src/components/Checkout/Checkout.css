@@ -1,0 +1,97 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__title {
+    align-self: start;
+    margin-left: 10px;
+}
+
+.products-list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: 50vh;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    width: clamp(260px, 80vw, 400px);
+}
+
+.products-list_product {
+    display: flex;
+    flex-direction: column;
+    background-color: #f3f3f3;
+    border-radius: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+.products-list_product-image {
+    width: 100px;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+.products__product-quantity,
+.products__product-price,
+.products__product-subtotal {
+    font-size: 1rem;
+}
+
+.resume {
+    background-color: #c1ddff;    
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 20px 0px;
+    padding: 0px 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+
+@media screen and (min-width: 1024px) {
+    .main {
+        display: grid;
+        justify-content: space-between;
+        grid-template-rows: repeat(3, auto);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            'title ...'
+            'products form'
+            'resume form';
+        column-gap: 20px;
+        justify-items: center;
+    }
+    .main__title{
+        grid-area: title;
+        width: fit-content;
+        justify-self: start;
+    }
+
+    .products-list {
+        grid-area: products;
+        align-items: start;        
+    }
+    .products-list_product {
+        width: 100%;
+    }
+
+    .resume {
+        grid-area: resume;
+        margin-bottom: 0;
+        width: clamp(260px, 80vw, 400px);
+    }
+
+    .form {
+        grid-area: form;
+        align-self: end;        
+    }
+}
