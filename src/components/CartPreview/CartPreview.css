@@ -1,6 +1,6 @@
 .cart-preview {
     background-color: #ffffff;
-    width: 80vw;
+    width: clamp(260px, 80vw, 450px);
     border-radius: 10px;
     padding-bottom: 10px;
 }
@@ -14,7 +14,7 @@
 
 .cart-preview__contents {
     height: 50vh;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
     overscroll-behavior-y: contain;
     display: flex;
@@ -53,6 +53,7 @@
     margin-top: 10px;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 .cart-preview__overlay {

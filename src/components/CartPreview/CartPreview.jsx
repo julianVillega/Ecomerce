@@ -9,7 +9,7 @@ import { ItemCount } from '../ItemCount/ItemCount';
 import { NavLink } from 'react-router-dom';
 
 export const CartPreview = () => {
-    const { products, showCartPreview, setShowCartPreview } = useContext(CartContext);
+    const { products, showCartPreview, setShowCartPreview, clearCart } = useContext(CartContext);
 
     return (
         <>
@@ -53,9 +53,14 @@ export const CartPreview = () => {
                 </div>
                 <div className='cart-preview__purchase-div'>
                     {products.length != 0 && (
-                        <Button as={NavLink} to={`checkout`} variant='primary'>
-                            Finalizar Compra
-                        </Button>
+                        <>
+                            <Button as={NavLink} to={`checkout`} variant='primary'>
+                                Finalizar Compra
+                            </Button>
+                            <Button onClick={()=>clearCart()} variant='danger'>
+                                Vaciar Carrito
+                            </Button>
+                        </>
                     )}
                 </div>
             </div>
