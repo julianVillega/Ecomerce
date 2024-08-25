@@ -57,7 +57,7 @@ export const Checkout = () => {
     //si el carrito esta vacio y no estamos esperando el id de la orden
     if (products.length === 0 && orderId === null && !waitingOrder)
         return (
-            <div>
+            <div className='empty-cart'>
                 <h1>Tu carrito esta vacio, agrega productos y volve mas tarde</h1>
                 <Button as={NavLink} to={'/'}>
                     Ver Productos
@@ -68,7 +68,7 @@ export const Checkout = () => {
     //si estamos esperando el id del orden o ya lo tenemos
     if (orderId != null || waitingOrder) {
         return (
-            <>
+            <div className='order-div'>
                 <h1>Gracias por tu compra</h1>
                 <h2>
                     {'Tu numero de pedido es: '}
@@ -77,7 +77,7 @@ export const Checkout = () => {
                 <Button as={NavLink} to={'/'}>
                     Ver Productos
                 </Button>
-            </>
+            </div>
         );
     }
     return (
@@ -106,6 +106,7 @@ export const Checkout = () => {
                 <h3>{`Total: ${formatPrice(getFinalPrice())}`}</h3>
             </div>
             <Form onSubmit={handleSubmit} className='form'>
+                <h2>Completa tus datos:</h2>
                 <Form.Group className='mb-3' controlId='name'>
                     <Form.Label>Nombre</Form.Label>
                     <Form.Control

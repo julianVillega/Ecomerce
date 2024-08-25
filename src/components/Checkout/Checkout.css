@@ -1,3 +1,7 @@
+.empty-cart, .order-div {
+    margin: 50px auto;
+    width: clamp(200px, 80vw, 500px);
+}
 .main {
     display: flex;
     flex-direction: column;
@@ -43,7 +47,7 @@
 }
 
 .resume {
-    background-color: #c1ddff;    
+    background-color: #c1ddff;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -54,23 +58,23 @@
 .form {
     display: flex;
     flex-direction: column;
-    width: 90%;
+    width: clamp(300px, 90%, 450px);
 }
 
 @media screen and (min-width: 1024px) {
     .main {
         display: grid;
-        justify-content: space-between;
+        justify-content: space-around;
         grid-template-rows: repeat(3, auto);
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas:
-            'title ...'
+            'title form-title'
             'products form'
             'resume form';
         column-gap: 20px;
         justify-items: center;
     }
-    .main__title{
+    .main__title {
         grid-area: title;
         width: fit-content;
         justify-self: start;
@@ -78,7 +82,7 @@
 
     .products-list {
         grid-area: products;
-        align-items: start;        
+        align-items: start;
     }
     .products-list_product {
         width: 100%;
