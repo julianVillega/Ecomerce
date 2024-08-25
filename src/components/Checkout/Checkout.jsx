@@ -49,7 +49,7 @@ export const Checkout = () => {
         e.preventDefault();
         e.stopPropagation();
         if (formValues.email === formValues.emailCopy && isFormComplete) {
-            placeOrder({ ...formValues, ...products });
+            placeOrder({ ...formValues, ...products, date: Date.now()});
             clearCart();
         }
     }
